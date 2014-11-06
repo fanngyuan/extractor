@@ -1,6 +1,7 @@
 package com.snowcat;
 
 import com.snowcat.config.Jobs;
+import com.snowcat.job.JobsHandler;
 import org.apache.log4j.Logger;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
@@ -27,6 +28,7 @@ public class Main {
             Unmarshaller u = jc.createUnmarshaller();
             JAXBElement configElement = (JAXBElement) u.unmarshal(new FileInputStream("../config/config.xml"));
             Jobs jobs=(Jobs)configElement.getValue();
+            JobsHandler.handleJobs(jobs);
         }catch (FileNotFoundException|JAXBException e){
             logger.warn("some error happened.",e);
         }

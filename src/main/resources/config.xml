@@ -41,7 +41,63 @@
         </target>
         </action>
     </job>
+    <job id="dailyStatServiceTrigger">
+        <property name="cronExpression" value="0 0 3 * * ?"/>
+        <action>
+        <source>
+          <datasource></datasource>
+          <query>
+            <sql></sql>
+            <params>
+              <param></param>
+              <param></param>
+            </params>
+          </query>
+        </source>
+        <target>
+            <sql></sql>
+            <params>
+              <param></param>
+              <param></param>
+            </params>
+        </target>
+        </action>
+        <action>
+        <source>
+          <datasource></datasource>
+          <query>
+            <sql></sql>
+            <params>
+              <param></param>
+              <param></param>
+            </params>
+          </query>
+        </source>
+        <target>
+            <sql></sql>
+            <params>
+              <param></param>
+              <param></param>
+            </params>
+        </target>
+        </action>
+    </job>
 
+    <qjob>
+      <qaction>
+      <qsource>
+        <datasource></datasource>
+        <queue></queue>
+      </qsource>
+      <target>
+        <sql></sql>
+        <params>
+          <param></param>
+          <param></param>
+        </params>
+      </target>
+      </qaction>
+    </qjob>
     <qjob>
       <qaction>
       <qsource>
