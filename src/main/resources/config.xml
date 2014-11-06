@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jobs>
+    <job id="dailyStatServiceTrigger">
+        <property name="cronExpression" value="0 0 3 * * ?"/>
+        <source>
+          <datasource></datasource>
+          <query>
+            <sql></sql>
+            <params>
+              <param></param>
+              <param></param>
+            </params>
+          </query>
+        </source>
+        <target>
+            <sql></sql>
+            <params>
+              <param></param>
+              <param></param>
+            </params>
+        </target>
+    </job>
+
+    <qjob>
+      <qsource>
+        <datasource></datasource>
+        <queue></queue>
+      </qsource>
+      <target>
+        <sql></sql>
+        <params>
+          <param></param>
+          <param></param>
+        </params>
+      </target>
+    </qjob>
+</jobs>

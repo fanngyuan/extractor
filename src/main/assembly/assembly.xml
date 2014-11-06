@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<assembly>
+    <formats>
+        <format>zip</format>
+    </formats>
+    <includeBaseDirectory>True</includeBaseDirectory>
+    <dependencySets>
+        <dependencySet>
+            <outputDirectory>libs</outputDirectory>
+        </dependencySet>
+        <dependencySet>
+            <outputDirectory>libs</outputDirectory>
+            <unpack>false</unpack>
+            <scope>system</scope>
+        </dependencySet>
+    </dependencySets>
+    <fileSets>
+        <fileSet>
+            <directory>src/main/bin</directory>
+            <outputDirectory>bin</outputDirectory>
+        </fileSet>
+        <fileSet>
+            <directory>src/main/resources</directory>
+            <outputDirectory>conf</outputDirectory>
+        </fileSet>
+    </fileSets>
+</assembly>
