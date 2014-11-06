@@ -25,8 +25,8 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element ref="{}sql"/>
- *         &lt;element ref="{}params"/>
+ *         &lt;element ref="{}qsource"/>
+ *         &lt;element ref="{}target"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -37,63 +37,63 @@ import javax.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
-    "sql",
-    "params"
+    "qsource",
+    "target"
 })
-@XmlRootElement(name = "target")
-public class Target {
+@XmlRootElement(name = "qaction")
+public class Qaction {
 
     @XmlElement(required = true)
-    protected Sql sql;
+    protected Qsource qsource;
     @XmlElement(required = true)
-    protected Params params;
+    protected Target target;
 
     /**
-     * Gets the value of the sql property.
+     * Gets the value of the qsource property.
      * 
      * @return
      *     possible object is
-     *     {@link com.snowcat.config.Sql }
+     *     {@link com.snowcat.config.Qsource }
      *     
      */
-    public Sql getSql() {
-        return sql;
+    public Qsource getQsource() {
+        return qsource;
     }
 
     /**
-     * Sets the value of the sql property.
+     * Sets the value of the qsource property.
      * 
      * @param value
      *     allowed object is
-     *     {@link com.snowcat.config.Sql }
+     *     {@link com.snowcat.config.Qsource }
      *     
      */
-    public void setSql(Sql value) {
-        this.sql = value;
+    public void setQsource(Qsource value) {
+        this.qsource = value;
     }
 
     /**
-     * Gets the value of the params property.
+     * Gets the value of the target property.
      * 
      * @return
      *     possible object is
-     *     {@link com.snowcat.config.Params }
+     *     {@link com.snowcat.config.Target }
      *     
      */
-    public Params getParams() {
-        return params;
+    public Target getTarget() {
+        return target;
     }
 
     /**
-     * Sets the value of the params property.
+     * Sets the value of the target property.
      * 
      * @param value
      *     allowed object is
-     *     {@link com.snowcat.config.Params }
+     *     {@link com.snowcat.config.Target }
      *     
      */
-    public void setParams(Params value) {
-        this.params = value;
+    public void setTarget(Target value) {
+        this.target = value;
     }
 
 }
