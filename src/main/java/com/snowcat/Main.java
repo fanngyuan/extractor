@@ -28,7 +28,7 @@ public class Main {
             Unmarshaller u = jc.createUnmarshaller();
             JAXBElement configElement = (JAXBElement) u.unmarshal(new FileInputStream("../config/config.xml"));
             Jobs jobs=(Jobs)configElement.getValue();
-            JobsHandler.handleJobs(jobs);
+            JobsHandler.handleJobs(context,jobs);
         }catch (FileNotFoundException|JAXBException e){
             logger.warn("some error happened.",e);
         }

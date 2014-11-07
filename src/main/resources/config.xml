@@ -4,12 +4,12 @@
         <property name="cronExpression" value="0 0 3 * * ?"/>
         <action>
         <source>
-          <datasource></datasource>
+          <datasource>template</datasource>
           <query>
-            <sql></sql>
+            <sql>aaaa</sql>
             <params>
-              <param></param>
-              <param></param>
+              <param>aaa</param>
+              <param>aaa</param>
             </params>
           </query>
         </source>
@@ -86,8 +86,22 @@
     <qjob>
       <qaction>
       <qsource>
-        <datasource></datasource>
-        <queue></queue>
+        <host>abc</host>
+        <port>123</port>
+        <queue>abc</queue>
+      </qsource>
+      <target>
+        <sql></sql>
+        <params>
+          <param></param>
+          <param></param>
+        </params>
+      </target>
+      </qaction>
+      <qaction>
+      <qsource>
+        <host>abc</host>
+        <port>123</port>
       </qsource>
       <target>
         <sql></sql>
@@ -101,8 +115,8 @@
     <qjob>
       <qaction>
       <qsource>
-        <datasource></datasource>
-        <queue></queue>
+        <host>abc</host>
+        <port>123</port>
       </qsource>
       <target>
         <sql></sql>
@@ -113,4 +127,5 @@
       </target>
       </qaction>
     </qjob>
+
 </jobs>
